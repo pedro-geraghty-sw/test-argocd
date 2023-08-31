@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: pgfsw/nginx:v0.1.0
+        image: pgfsw/nginx-private:latest
         resources:
           limits:
             memory: "128Mi"

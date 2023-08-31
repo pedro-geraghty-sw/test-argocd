@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: second-app-bar
+  name: my-app
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/pedro-geraghty-sw/test-argocd.git
-    targetRevision: HEAD
-    path: environments/staging/second-app
+    repoURL: https://github.com/southworks/rukbat.git
+    targetRevision: personal/pgf
+    path: environments/staging/my-app
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
